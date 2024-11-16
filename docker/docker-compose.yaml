@@ -359,7 +359,7 @@ services:
 
   # The DifySandbox
   sandbox:
-    image: langgenius/dify-sandbox:0.2.10
+    image: dify-sandbox:geo-latest
     restart: always
     environment:
       # The DifySandbox configurations
@@ -812,7 +812,7 @@ networks:
   # create a network between sandbox, api and ssrf_proxy, and can not access outside.
   ssrf_proxy_network:
     driver: bridge
-    internal: true
+    # internal: true
   milvus:
     driver: bridge
   opensearch-net:
